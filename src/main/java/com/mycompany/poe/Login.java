@@ -1,3 +1,10 @@
+//ST10043202
+
+//Baeldung (2018). Java Check a String for Lowercase/Uppercase Letter, Special Character and Digit. [Online]. 
+//Available at: https://www.baeldung.com/java-lowercase-uppercase-special-character-digit-regex [Accessed 12 May 2022].
+
+//Farrell, J. 2019. Java Programming. 9th ed. Boston: Cengage Learning Inc.
+
 package com.mycompany.poe;
 
 import java.util.regex.Pattern;
@@ -38,7 +45,9 @@ public class Login {
     }
 
     public boolean checkPasswordComplexity() {//check if the password is correctly formatted;
-//https://www.baeldung.com/java-lowercase-uppercase-special-character-digit-regex
+        //this code was taken from baeldung
+        //https://www.baeldung.com/java-lowercase-uppercase-special-character-digit-regex
+        //baeldung is the author
         String pattern1 = ".*[A-Z].*";
         String pattern2 = ".*[0-9].*";
         String pattern3 = ".*[ ,!,#,$,%,&,',(,),*,+,,,-,.,/,:,;,<,=,>,?,@,[,],^,`,{,|,}].*";
@@ -100,7 +109,7 @@ public class Login {
     }
 
     public void loginInput() {//requesting and validating user input for login details;
-        for (int i = 1; i >= 0; i--) {
+        for (int i = 1; i >= 0; i--) {//looping the number of attempts
             logUsername = JOptionPane.showInputDialog(null, "What is your username?", "Login", 3);
             logPassword = JOptionPane.showInputDialog(null, "What is your password?", "Login", 3);
 

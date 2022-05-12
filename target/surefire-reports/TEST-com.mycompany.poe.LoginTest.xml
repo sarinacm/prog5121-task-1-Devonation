@@ -62,7 +62,7 @@
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
   <testcase classname="com.mycompany.poe.LoginTest" name="com.mycompany.poe.LoginTest.testCheckUserNameCorrectlyFormatted" time="0.001"/>
-  <testcase classname="com.mycompany.poe.LoginTest" name="com.mycompany.poe.LoginTest.testCheckPasswordComplexitySuccess" time="0.008"/>
-  <testcase classname="com.mycompany.poe.LoginTest" name="com.mycompany.poe.LoginTest.testCheckUserNamePoorlyFormatted" time="0.001"/>
-  <testcase classname="com.mycompany.poe.LoginTest" name="com.mycompany.poe.LoginTest.testCheckPasswordComplexityFailure" time="0"/>
+  <testcase classname="com.mycompany.poe.LoginTest" name="com.mycompany.poe.LoginTest.testCheckPasswordComplexityFailure" time="0.008"/>
+  <testcase classname="com.mycompany.poe.LoginTest" name="com.mycompany.poe.LoginTest.testCheckPasswordComplexitySuccess" time="0.001"/>
+  <testcase classname="com.mycompany.poe.LoginTest" name="com.mycompany.poe.LoginTest.testCheckUserNamePoorlyFormatted" time="0"/>
 </testsuite>
