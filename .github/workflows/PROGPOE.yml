@@ -31,7 +31,7 @@ jobs:
      # Compiles classes to test 
       - name: compile classes
         working-directory: ./src
-        run: javac -cp "../testresources/junit-platform-console-standalone-1.8.2.jar" ./main/java/com/mycompany/poe/POE.java ./main/java/com/mycompany/poe/Login.java "./test/java/com/mycompany/poe/LoginTest.java" "./test/java/com/mycompany/poe/POETest.java"   
+        run: javac -cp "../testresources/junit-platform-console-standalone-1.8.2.jar" ./main/java/com/mycompany/poe/POE.java ./main/java/com/mycompany/poe/Login.java  "./test/java/com/mycompany/poe/POETest.java" "./test/java/com/mycompany/poe/LoginTest.java"  
 
     # list contents of src to verify that classess compiled 
       - name: List contents of src directory after compile
@@ -46,18 +46,18 @@ jobs:
         
         #copy compiled tests 
       - name : copy compiled Test classes to testresources directory 
-        working-directory: ./test/java/com/mycompany/poe
-        run: cp -t  "../../testresources/" Login.class POE.class
+        working-directory: ./src/test/java/com/mycompany/poe
+        run: cp -t  "../../../../../../testresources/" Login.class POE.class
         
         # list contents or directory
       - name: List contents test package
-        working-directory: ./test/java/com/mycompany/poe
+        working-directory: ./src/test/java/com/mycompany/poe
         run: ls
         
         #run Login Class tests and output report 
       - name: run Login Class tests and create report 
-        working-directory: ./test
+        working-directory: ./src/test/java/com/mycompany/poe
         run: |
          ls
-         java -jar  "../testresources/junit-platform-console-standalone-1.8.2.jar" -cp "." --select-class  poe.LoginTest
+         java -jar  "../../../../../../testresources/junit-platform-console-standalone-1.8.2.jar" -cp "." --select-class  LoginTest.java
          
