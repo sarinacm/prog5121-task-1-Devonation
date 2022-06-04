@@ -42,11 +42,11 @@ jobs:
        # copy compiled classes to test directory 
       - name : copy compiled classes to testresources directory 
         working-directory: ./src/main/java/com/mycompany/poe
-        run: cp -t  "../test/java/com/mycompany/poe" Login.class POE.class
+        run: cp -t  "../../../../../test/java/com/mycompany/poe" Login.class POE.class
         
         #copy compiled tests 
       - name : copy compiled Test classes to testresources directory 
-        working-directory: ./test/java/com/mycompany/poe
+        working-directory: ./src/test/java/com/mycompany/poe
         run: cp -t  "../../testresources/" LoginTest.class POETest.class
         
         # list contents or directory
