@@ -51,12 +51,12 @@ jobs:
         
         # list contents or directory
       - name: List contents test package
-        working-directory: ./test/java/com/mycompany/poe
+        working-directory: ./src/test/java/com/mycompany/poe
         run: ls
         
         #run Login Class tests and output report 
       - name: run Login Class tests and create report 
-        working-directory: ./test
+        working-directory: ./src/test
         run: |
          ls
          java -jar  "../testresources/junit-platform-console-standalone-1.8.2.jar" -cp "." --select-class  poe.LoginTest
