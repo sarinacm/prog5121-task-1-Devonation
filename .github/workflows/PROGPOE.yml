@@ -59,5 +59,5 @@ jobs:
         working-directory: ./src/test
         run: |
          ls
-         java -jar  "../../testresources/junit-platform-console-standalone-1.8.2.jar" -cp "." --select-class  java.com.mycompany.poe.LoginTest
+         java -jar  "../../testresources/junit-platform-console-standalone-1.8.2.jar" -cp "." --select-class  src.test.java.com.mycompany.poe
          
